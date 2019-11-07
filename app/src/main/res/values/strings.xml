@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DynamicFeatureSimulation</string>
+    <string name="title_dynamicfeature">Module DF Sample</string>
 </resources>
