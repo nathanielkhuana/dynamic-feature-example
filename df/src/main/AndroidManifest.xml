@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.nathaniel.dynamicfeature">
+    package="com.nathaniel.df">
 
     <dist:module
         dist:instant="false"
@@ -10,5 +10,9 @@
         </dist:delivery>
         <dist:fusing dist:include="true" />
     </dist:module>
+
+    <application>
+        <activity android:name=".DFActivity" />
+    </application>
 </manifest>
 
