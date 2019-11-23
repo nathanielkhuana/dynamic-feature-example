@@ -20,6 +20,5 @@ class DFActivity : AppCompatActivity() {
             customView.icon.setImageResource(com.nathaniel.lib1.R.drawable.ic_android_studio)
             customView.setBackgroundResource(com.nathaniel.lib1.R.color.color_red)
         }
-
     }
 }

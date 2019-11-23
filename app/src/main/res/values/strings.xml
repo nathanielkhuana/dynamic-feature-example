@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">DynamicFeatureSimulation</string>
-    <string name="title_dynamicfeature">Module DF Sample</string>
+    <string name="title_df">Module DF Sample</string>
     <string name="go_to_df_page">Go To DF Page</string>
 </resources>
