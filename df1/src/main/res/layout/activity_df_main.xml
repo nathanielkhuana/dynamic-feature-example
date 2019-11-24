@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.nathaniel.df.CustomImageViewWithLabel
+    <com.nathaniel.df1.CustomImageViewWithLabel
         android:id="@+id/custom_image_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

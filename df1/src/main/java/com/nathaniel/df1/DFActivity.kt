@@ -1,9 +1,8 @@
-package com.nathaniel.df
+package com.nathaniel.df1
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.nathaniel.lib2.CustomImageView
 
 class DFActivity : AppCompatActivity() {
 

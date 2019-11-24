@@ -20,7 +20,7 @@ android {
         }
     }
 
-    dynamicFeatures = [":df", ":df2", ":df3"]
+    dynamicFeatures = [":df1", ":df2", ":df3"]
 
 
 }

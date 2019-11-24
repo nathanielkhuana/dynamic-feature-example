@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.nathaniel.df">
+    package="com.nathaniel.df1">
 
     <dist:module
         dist:instant="false"
@@ -14,7 +14,7 @@
 
 
     <application>
-        <activity android:name="com.nathaniel.df.DFActivity">
+        <activity android:name=".DFActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
