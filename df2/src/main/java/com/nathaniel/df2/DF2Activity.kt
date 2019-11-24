@@ -15,6 +15,7 @@ class DF2Activity : AppCompatActivity(), OnPageChangeListener, OnLoadCompleteLis
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_df2_main)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         findViewById<View>(R.id.view_page).setBackgroundResource(com.nathaniel.lib1.R.color.color_black)
 
         openPDF()
@@ -24,7 +25,7 @@ class DF2Activity : AppCompatActivity(), OnPageChangeListener, OnLoadCompleteLis
      * The PDF file can be found at
      * https://file-examples.com/index.php/sample-documents-download/sample-pdf-download/
      */
-    fun openPDF(){
+    private fun openPDF(){
         val pdfView = findViewById<PDFView>(R.id.pdf_view)
         pdfView.fromAsset("sample_pdf.pdf")
             .defaultPage(1)
@@ -47,5 +48,10 @@ class DF2Activity : AppCompatActivity(), OnPageChangeListener, OnLoadCompleteLis
 
     override fun onPageError(page: Int, t: Throwable?) {
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

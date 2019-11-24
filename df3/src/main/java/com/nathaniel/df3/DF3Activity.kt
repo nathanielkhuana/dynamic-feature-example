@@ -22,6 +22,8 @@ class DF3Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_df3_main)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        
         val customImageView = findViewById<CustomImageView>(R.id.custom_image_view)
         customImageView.setImageRes(R.drawable.ic_big_buck_bunny)
 
@@ -55,5 +57,10 @@ class DF3Activity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         player.release()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

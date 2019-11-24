@@ -10,6 +10,7 @@ class DF1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_df_main)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val customImageView = findViewById<CustomImageView>(R.id.custom_image_view)
 
@@ -21,5 +22,10 @@ class DF1Activity : AppCompatActivity() {
         findViewById<Button>(R.id.button_set_icon_android_studio).setOnClickListener {
             customImageView.setImageRes(com.nathaniel.lib1.R.drawable.ic_android_studio)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
