@@ -13,15 +13,27 @@ open class CustomImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
-    protected val imageView: ImageView
+    protected var imageView: ImageView
 
     init {
-        View.inflate(context, R.layout.custom_image_view, this)
-        imageView = findViewById(R.id.image_view)
+        View.inflate(context, getLayoutId(), this)
+        imageView = findViewById(getImageViewId())
+    }
+
+    open fun getLayoutId(): Int {
+        return R.layout.custom_image_view
+    }
+
+    open fun getImageViewId(): Int {
+        return R.id.image_view
     }
 
     open fun setImageRes(resId: Int) {
         imageView.setImageResource(resId)
+        updateBackgroundColor()
+    }
+
+    open fun updateBackgroundColor(){
         imageView.setBackgroundColor(getRandomColor())
     }
 

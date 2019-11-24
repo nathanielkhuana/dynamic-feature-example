@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">DynamicFeatureSimulation</string>
-    <string name="title_df">Module DF Sample</string>
-    <string name="go_to_df_page">Go To DF Page</string>
+    <string name="title_df1">df1</string>
     <string name="title_df2">df2</string>
     <string name="title_df3">df3</string>
+    <string name="go_to_df1">Go To DF1</string>
+    <string name="go_to_df2">Go To DF2</string>
+    <string name="go_to_df3">Go To DF3</string>
 </resources>

@@ -11,5 +11,6 @@ class DF3Activity : AppCompatActivity() {
         setContentView(R.layout.activity_df3_main)
 
         val customImageView = findViewById<CustomImageView>(R.id.custom_image_view)
+        customImageView.setImageRes(R.drawable.ic_google_logo)
     }
 }

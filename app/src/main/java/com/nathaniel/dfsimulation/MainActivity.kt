@@ -52,14 +52,20 @@ class MainActivity : AppCompatActivity() {
         splitInstallManager = SplitInstallManagerFactory.create(this)
         splitInstallManager.registerListener(listener)
 
-        findViewById<Button>(R.id.button_go_to_df).setOnClickListener {
-            installAndGoToDFPage()
+        findViewById<Button>(R.id.button_go_to_df1).setOnClickListener {
+            installAndGoToDFPage(MODULE_NAME_DF1, ACTIVITY_NAME_DF1)
+        }
+        findViewById<Button>(R.id.button_go_to_df2).setOnClickListener {
+            installAndGoToDFPage(MODULE_NAME_DF2, ACTIVITY_NAME_DF2)
+        }
+        findViewById<Button>(R.id.button_go_to_df3).setOnClickListener {
+            installAndGoToDFPage(MODULE_NAME_DF3, ACTIVITY_NAME_DF3)
         }
     }
 
-    private fun installAndGoToDFPage() {
-        if (!splitInstallManager.installedModules.contains(DF_MODULE_NAME)) {
-            val request = SplitInstallRequest.newBuilder().addModule(DF_MODULE_NAME).build()
+    private fun installAndGoToDFPage(moduleName:String, activityName:String) {
+        if (!splitInstallManager.installedModules.contains(moduleName)) {
+            val request = SplitInstallRequest.newBuilder().addModule(MODULE_NAME_DF1).build()
             splitInstallManager.startInstall(request).addOnSuccessListener { id -> sessionId = id }
                 .addOnFailureListener {
                     Toast.makeText(this, "Install Module Error", Toast.LENGTH_SHORT).show()
@@ -68,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         }
         try {
             val intent = Intent()
-            intent.setClassName(packageName, DF_ACTIVITY_NAME)
+            intent.setClassName(packageName, activityName)
             startActivity(intent)
         } catch (e:Exception) {
             e.printStackTrace()
@@ -82,7 +88,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val DF_MODULE_NAME = "df"
-        const val DF_ACTIVITY_NAME = "com.nathaniel.df.DFActivity"
+        const val MODULE_NAME_DF1 = "df1"
+        const val MODULE_NAME_DF2 = "df2"
+        const val MODULE_NAME_DF3 = "df3"
+        const val ACTIVITY_NAME_DF1 = "com.nathaniel.df1.DF1Activity"
+        const val ACTIVITY_NAME_DF2 = "com.nathaniel.df2.DF2Activity"
+        const val ACTIVITY_NAME_DF3 = "com.nathaniel.df3.DF3Activity"
     }
 }

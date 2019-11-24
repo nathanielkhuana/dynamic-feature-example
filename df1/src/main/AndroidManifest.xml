@@ -5,7 +5,7 @@
 
     <dist:module
         dist:instant="false"
-        dist:title="@string/title_df">
+        dist:title="@string/title_df1">
         <dist:delivery>
             <dist:on-demand/>
         </dist:delivery>
@@ -14,7 +14,7 @@
 
 
     <application>
-        <activity android:name=".DFActivity">
+        <activity android:name=".DF1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
