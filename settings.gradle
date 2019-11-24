@@ -1,2 +1,2 @@
-include ':app', ':lib1', ':lib2', ':df', ':df2'
+include ':app', ':lib1', ':lib2', ':df', ':df2', ':df3'
 rootProject.name='DynamicFeatureSimulation'
