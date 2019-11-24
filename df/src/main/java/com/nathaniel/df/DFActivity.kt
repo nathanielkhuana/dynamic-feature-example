@@ -11,14 +11,12 @@ class DFActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_df_main)
 
-        val customImageView = findViewById<CustomImageView>(R.id.custom_image_view)
+        val customImageView = findViewById<CustomImageViewWithLabel>(R.id.custom_image_view)
         findViewById<Button>(R.id.button_set_icon_android).setOnClickListener {
-            customImageView.icon.setImageResource(com.nathaniel.lib1.R.drawable.ic_android_symbol)
-            customImageView.icon.setBackgroundResource(com.nathaniel.lib1.R.color.color_grey)
+            customImageView.setImageRes(com.nathaniel.lib1.R.drawable.ic_android_symbol)
         }
         findViewById<Button>(R.id.button_set_icon_android_studio).setOnClickListener {
-            customImageView.icon.setImageResource(com.nathaniel.lib1.R.drawable.ic_android_studio)
-            customImageView.icon.setBackgroundResource(com.nathaniel.lib1.R.color.color_red)
+            customImageView.setImageRes(com.nathaniel.lib1.R.drawable.ic_android_studio)
         }
     }
 }
