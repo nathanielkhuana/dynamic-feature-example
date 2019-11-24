@@ -13,7 +13,8 @@
     </dist:module>
 
     <application>
-        <activity android:name="com.nathaniel.df2.DF2Activity">
+        <activity android:name="com.nathaniel.df2.DF2Activity"
+            android:label="@string/title_df2">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
