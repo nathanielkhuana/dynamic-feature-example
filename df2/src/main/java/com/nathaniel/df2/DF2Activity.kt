@@ -28,7 +28,7 @@ class DF2Activity : AppCompatActivity(), OnPageChangeListener, OnLoadCompleteLis
     private fun openPDF(){
         val pdfView = findViewById<PDFView>(R.id.pdf_view)
         pdfView.fromAsset("sample_pdf.pdf")
-            .defaultPage(1)
+            .defaultPage(0)
             .onPageChange(this)
             .enableAnnotationRendering(true)
             .onLoad(this)

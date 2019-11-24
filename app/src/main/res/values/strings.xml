@@ -6,4 +6,6 @@
     <string name="go_to_df1">Go To DF1</string>
     <string name="go_to_df2">Go To DF2</string>
     <string name="go_to_df3">Go To DF3</string>
+
+    <string name="downloading_status">Download %1$s, %2$s (%3$s)</string>
 </resources>
