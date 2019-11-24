@@ -20,7 +20,7 @@ class CustomImageViewWithLabel @JvmOverloads constructor(
         return R.id.image_view
     }
 
-    override fun updateBackgroundColor() {
+    override fun updateBackground() {
         val randomColor = getRandomColor()
         imageView.background = getGradientDrawable(randomColor)
         colorTextView.text = String.format("#%06X", 0xFFFFFF and randomColor)

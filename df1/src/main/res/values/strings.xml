@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="button_text_android_robot">Android Robot</string>
-    <string name="button_text_android_studio">Android Studio</string>
+    <string name="button_text_random_image">Random Image</string>
+    <string name="button_text_update_background">Update Background</string>
 </resources>

@@ -3,6 +3,7 @@ package com.nathaniel.lib2
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
@@ -12,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
 import androidx.palette.graphics.Palette
 import kotlin.random.Random
-import android.graphics.drawable.GradientDrawable
 
 
 open class CustomImageView @JvmOverloads constructor(
@@ -20,7 +20,7 @@ open class CustomImageView @JvmOverloads constructor(
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
     protected val imageView: ImageView
-    protected lateinit var palette: Palette
+    private lateinit var palette: Palette
 
     init {
         View.inflate(context, getLayoutId(), this)
@@ -41,10 +41,10 @@ open class CustomImageView @JvmOverloads constructor(
         bitmap?.let {
             palette = Palette.from(bitmap).generate()
         }
-        updateBackgroundColor()
+        updateBackground()
     }
 
-    open fun updateBackgroundColor() {
+    open fun updateBackground() {
         imageView.background = getGradientDrawable(getRandomColor())
     }
 
