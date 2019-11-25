@@ -1,5 +1,6 @@
 package com.nathaniel.dfsimulation
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -30,11 +31,6 @@ class MainActivity : AppCompatActivity() {
                         state, this,
                         DOWNLOAD_CONFIRMATION_REQUEST_CODE
                     )
-                }
-                SplitInstallSessionStatus.FAILED -> {
-                    Toast.makeText(
-                        this, "Install Module Error:${state.errorCode()}", Toast.LENGTH_SHORT
-                    ).show()
                 }
                 SplitInstallSessionStatus.INSTALLED -> {
                     Toast.makeText(this, "Install Module Success", Toast.LENGTH_SHORT).show()
@@ -73,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     private fun installAndGoToDFPage(moduleName: String, activityName: String) {
         if (!splitInstallManager.installedModules.contains(moduleName)) {
             downloadedModuleName = moduleName
-            val request = SplitInstallRequest.newBuilder().addModule(MODULE_NAME_DF1).build()
+            val request = SplitInstallRequest.newBuilder().addModule(moduleName).build()
             splitInstallManager.startInstall(request).addOnSuccessListener { id -> sessionId = id }
                 .addOnFailureListener {
                     Toast.makeText(this, "Install Module Error", Toast.LENGTH_SHORT).show()
@@ -101,6 +97,18 @@ class MainActivity : AppCompatActivity() {
             getString(
                 R.string.downloading_status, downloadedModuleName, byteDownloadText, percentageText
             )
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == DOWNLOAD_CONFIRMATION_REQUEST_CODE) {
+            progressTextView.text = ""
+            if (resultCode == Activity.RESULT_CANCELED) {
+                Toast.makeText(this, "", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
     }
 
     override fun onDestroy() {

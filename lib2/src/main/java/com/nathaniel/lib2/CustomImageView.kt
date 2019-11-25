@@ -49,10 +49,12 @@ open class CustomImageView @JvmOverloads constructor(
     }
 
     protected fun getRandomColor(): Int {
-        val randomNumber = Random.nextInt(0, 6)
+        if (palette.swatches.size < 1) {
+            return ContextCompat.getColor(context, R.color.color_default_bg)
+        }
+        val randomNumber = Random.nextInt(0, palette.swatches.size)
         return palette.swatches[randomNumber]?.rgb ?: ContextCompat.getColor(
-            context,
-            R.color.color_default_bg
+            context, R.color.color_default_bg
         )
     }
 
