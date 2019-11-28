@@ -32,12 +32,17 @@ class MainActivity : AppCompatActivity() {
                         DOWNLOAD_CONFIRMATION_REQUEST_CODE
                     )
                 }
+                SplitInstallSessionStatus.FAILED -> {
+                    Toast.makeText(
+                        this, "Install Module Error:${state.errorCode()}", Toast.LENGTH_SHORT
+                    ).show()
+                }
                 SplitInstallSessionStatus.INSTALLED -> {
                     Toast.makeText(this, "Install Module Success", Toast.LENGTH_SHORT).show()
                 }
-                else -> Toast.makeText(
-                    this, "Install Module Error, Status: ${state.status()}", Toast.LENGTH_SHORT
-                ).show()
+                else -> {
+                    // Do nothing
+                }
             }
         }
     }
