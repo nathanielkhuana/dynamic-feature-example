@@ -1,4 +1,4 @@
-package com.nathaniel.dfsimulation
+package com.nathaniel.dfexample
 
 import android.app.Activity
 import android.content.Context

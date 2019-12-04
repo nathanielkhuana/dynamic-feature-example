@@ -1,4 +1,4 @@
-package com.nathaniel.dfsimulation
+package com.nathaniel.dfexample
 
 import org.junit.Test
 

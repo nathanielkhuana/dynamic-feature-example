@@ -1,2 +1,2 @@
-# DynamicFeatureSimulation
-Dynamic Feature Simulation
+# Dynamic Feature Example
+Dynamic Feature Example

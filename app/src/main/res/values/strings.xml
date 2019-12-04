@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DynamicFeatureSimulation</string>
+    <string name="app_name">Dynamic Feature Example</string>
     <string name="title_df1">DF1 - Random Image</string>
     <string name="title_df2">DF2 - PDF Viewer</string>
     <string name="title_df3">DF3 - Video Player</string>
