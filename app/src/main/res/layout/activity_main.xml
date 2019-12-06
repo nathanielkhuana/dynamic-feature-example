@@ -6,13 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/button_go_to_df1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/go_to_df1"
+        app:layout_constraintBottom_toTopOf="@id/text_view_download_progress"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button_go_to_df2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_go_to_df2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_df2"
+        app:layout_constraintBottom_toTopOf="@id/text_view_download_progress"
+        app:layout_constraintLeft_toRightOf="@id/button_go_to_df1"
+        app:layout_constraintRight_toLeftOf="@id/button_go_to_df3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_go_to_df3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_df3"
+        app:layout_constraintBottom_toTopOf="@id/text_view_download_progress"
+        app:layout_constraintLeft_toRightOf="@+id/button_go_to_df2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/text_view_download_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_go_to_df2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">DynamicFeatureSimulation</string>
+    <string name="app_name">Dynamic Feature Example</string>
+    <string name="title_df1">DF1 - Random Image</string>
+    <string name="title_df2">DF2 - PDF Viewer</string>
+    <string name="title_df3">DF3 - Video Player</string>
+    <string name="go_to_df1">Go To DF1</string>
+    <string name="go_to_df2">Go To DF2</string>
+    <string name="go_to_df3">Go To DF3</string>
+
+    <string name="downloading_status">Download %1$s\n%2$s\n(%3$s)</string>
 </resources>
